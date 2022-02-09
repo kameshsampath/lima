@@ -232,6 +232,7 @@ func GuestAgentBinary(arch string) (io.ReadCloser, error) {
 		// - agent: /usr/local/share/lima/lima-guestagent.Linux-x86_64
 		filepath.Join(selfDirDir, "share/lima/lima-guestagent.Linux-"+arch),
 		// TODO: support custom path
+		"/usr/local/share/lima/lima-guestagent.Linux-x86_64",
 	}
 	for _, candidate := range candidates {
 		if f, err := os.Open(candidate); err == nil {
